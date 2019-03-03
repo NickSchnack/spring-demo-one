@@ -17,7 +17,6 @@
     <bean id="myFortuneService"
           class="com.udemyspringhibernate.springdemoone.HappyFortuneService">
     </bean>
-
     <bean id="myCoach"
         class="com.udemyspringhibernate.springdemoone.VolleyballCoach">
             <constructor-arg ref="myFortuneService"/>
