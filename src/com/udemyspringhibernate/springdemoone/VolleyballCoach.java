@@ -5,7 +5,7 @@ public class VolleyballCoach implements Coach {
     private FortuneService fortuneService;
 
     public VolleyballCoach(FortuneService theFortuneService) {
-        fortuneService = theFortuneService;
+        this.fortuneService = theFortuneService;
     }
 
     @Override

@@ -5,7 +5,7 @@ public class TrackCoach implements Coach {
     private FortuneService fortuneService;
 
     public TrackCoach(FortuneService theFortuneService) {
-        fortuneService = theFortuneService;
+        this.fortuneService = theFortuneService;
     }
 
     @Override

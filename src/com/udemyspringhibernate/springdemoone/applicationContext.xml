@@ -19,7 +19,7 @@
     </bean>
 
     <bean id="myCoach"
-        class="com.udemyspringhibernate.springdemoone.VolleyballCoach">
+        class="com.udemyspringhibernate.springdemoone.BaseballCoach">
             <constructor-arg ref="myFortuneService"/>
     </bean>
 
