@@ -7,6 +7,9 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <!-- Load Properties File -->
+    <context:property-placeholder location="com/udemyspringhibernate/springdemoone/sport.properties"/>
+
     <!-- Define logging bean -->
     <bean id="myLoggerConfig" class="com.udemyspringhibernate.springdemoone.MyLoggerConfig" init-method="initLogger">
         <property name="rootLoggerLevel" value="FINE" />
@@ -20,7 +23,18 @@
 
     <bean id="myCoach"
         class="com.udemyspringhibernate.springdemoone.BaseballCoach">
-            <constructor-arg ref="myFortuneService"/>
+
+        <!-- setup constructor injection -->
+        <constructor-arg ref="myFortuneService"/>
+    </bean>
+
+    <bean id="myCricketCoach"
+          class="com.udemyspringhibernate.springdemoone.CricketCoach">
+
+        <!-- setup setter injection -->
+        <property name="fortuneService" ref="myFortuneService" />
+        <property name="emailAddress" value="${foo.email}" />
+        <property name="team" value="${foo.team}" />
     </bean>
 
 </beans>
