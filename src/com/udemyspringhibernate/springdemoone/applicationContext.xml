@@ -18,7 +18,7 @@
 
     <!-- Define your beans here -->
     <bean id="myFortuneService"
-          class="com.udemyspringhibernate.springdemoone.HappyFortuneService">
+          class="com.udemyspringhibernate.springdemoone.RandomFortuneService">
     </bean>
 
     <bean id="myCoach"
