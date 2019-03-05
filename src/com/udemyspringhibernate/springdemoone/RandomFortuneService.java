@@ -4,7 +4,8 @@ import java.util.Random;
 
 public class RandomFortuneService implements FortuneService{
 
-    private String[] fortuneArray = {
+    private Random random = new Random();
+    private String[] fortuneData = {
             "Today is your lucky day!",
             "Something great is about to happen!",
             "You will learn something awesome this week!"
@@ -16,9 +17,8 @@ public class RandomFortuneService implements FortuneService{
     }
 
     private String getRandomFortune() {
-        Random random = new Random();
-        int index = random.nextInt(fortuneArray.length);
-        return fortuneArray[index];
+        int index = random.nextInt(fortuneData.length);
+        return fortuneData[index];
     }
 
 }
