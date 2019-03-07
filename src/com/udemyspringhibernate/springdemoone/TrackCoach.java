@@ -18,5 +18,13 @@ public class TrackCoach implements Coach {
         return fortuneService.getFortune();
     }
 
+    public void startupActivities() {
+        System.out.println("TrackCoach: inside 'startupActivities' method");
+    }
+
+    public void cleanupActivities() {
+        System.out.println("TrackCoach: inside 'cleanupActivities' method");
+    }
+
 }
 
